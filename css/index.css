@@ -1,15 +1,39 @@
+/* estilo geral da página, o objetivo aqui irá se assemelhar com um terminal de computador antigo */
+/* estilo geral da página */
+* {
+  background-color: #000500;
+  font-family: 'Roboto Mono', monospace;
+  color:#26c620;
+}
+
+header{
+  font-size: 26px;
+}
+
+/* container do formulário */
+.formcontainer{
+    display: flex;
+    justify-content: center; /* Alinhar horizontalmente ao centro */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    height: 25vh; /* Altura da janela de visualização */
+    font-size: 23px;
+}
+
+/* div do formulário */
+.form{
+    border: 3px solid #26c620; /* Borda sólida verde */
+    border-radius: 10px; /* Raio de curvatura de 10 pixels */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 35%;
+    font-size: 25px;
+}
+
 label {
     display: block;
     margin-top: 10px;
   }
-  input[type="number"] {
-    width: 200px;
-  }
-  select {
-    width: 220px;
-  }
-  #output {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
+
+/* caixinha de saída do form */
+.output {
+  font-size: 17px;
+}
