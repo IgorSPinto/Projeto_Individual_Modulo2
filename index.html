@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Importando as fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  
   <title>Conversor de Unidades</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
+
 <body>
-  <h1>Conversor de Unidades</h1>
-  <form id="converterForm">
-    <label for="valor">Valor:</label>
-    <input type="number" id="valor" required>
 
-    <label for="categoria">Categoria:</label>
-    <select id="categoria" onchange="atualizarUnidadesDestino()">
-      <option value="-"> </option>
-      <option value="comprimento">Comprimento</option>
-      <option value="peso">Peso</option>
-      <option value="temperatura">Temperatura</option>
-    </select>
+  <!-- topo do site -->
+  <header>
+    <nav>
+        <div class="header">
+          <h1>Conversor de Unidades</h1>
+        </div>
+    </nav>
+</header>
+  
+<!-- covertor de unidades -->
+  <div class="formcontainer">
+    <div class="form">
+      
+      <form id="converterForm">
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" class="output" required>
 
-    <label for="unidadeOrigem">Unidade de Medida de Origem:</label>
-    <select id="unidadeOrigem" onchange="atualizarUnidadesDestino()">
-      <!-- As opções serão preenchidas dinamicamente com JavaScript -->
-    </select>
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" class="output" onchange="atualizarUnidadesDestino()">
+          <option value="-"> </option>
+          <option value="comprimento">Comprimento</option>
+          <option value="peso">Peso</option>
+          <option value="temperatura">Temperatura</option>
+        </select>
 
-    <label for="unidadeDestino">Unidade de Medida de Destino:</label>
-    <select id="unidadeDestino">
-      <!-- As opções serão preenchidas dinamicamente com JavaScript -->
-    </select>
+        <label for="unidadeOrigem">Unidade de Medida de Origem:</label>
+        <select id="unidadeOrigem" class="output" onchange="atualizarUnidadesDestino()">
+          <!-- As opções serão preenchidas dinamicamente com JavaScript -->
+        </select>
 
-    <button type="button" onclick="converter()">Converter</button>
+        <label for="unidadeDestino">Unidade de Medida de Destino:</label>
+        <select id="unidadeDestino" class="output">
+          <!-- As opções serão preenchidas dinamicamente com JavaScript -->
+        </select>
 
-    <label for="resultado">Resultado:</label>
-    <input type="text" id="resultado" readonly>
+        <button type="button" class="output" onclick="converter()">Converter</button>
 
-  </form>
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" class="output" readonly>
+      </form>
+    
+    </div>
+  </div>
 
   <script src="./js/index.js"></script>
 </body>
