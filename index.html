@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+  <h1>Conversor de Unidades</h1>
+  <form id="converterForm">
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" required>
+
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" onchange="atualizarUnidadesDestino()">
+      <option value="-"> </option>
+      <option value="comprimento">Comprimento</option>
+      <option value="peso">Peso</option>
+      <option value="temperatura">Temperatura</option>
+    </select>
+
+    <label for="unidadeOrigem">Unidade de Medida de Origem:</label>
+    <select id="unidadeOrigem" onchange="atualizarUnidadesDestino()">
+      <!-- As opções serão preenchidas dinamicamente com JavaScript -->
+    </select>
+
+    <label for="unidadeDestino">Unidade de Medida de Destino:</label>
+    <select id="unidadeDestino">
+      <!-- As opções serão preenchidas dinamicamente com JavaScript -->
+    </select>
+
+    <button type="button" onclick="converter()">Converter</button>
+
+    <label for="resultado">Resultado:</label>
+    <input type="text" id="resultado" readonly>
+
+  </form>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
