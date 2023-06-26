@@ -1,0 +1,15 @@
+label {
+    display: block;
+    margin-top: 10px;
+  }
+  input[type="number"] {
+    width: 200px;
+  }
+  select {
+    width: 220px;
+  }
+  #output {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
